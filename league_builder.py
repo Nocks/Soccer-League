@@ -32,7 +32,7 @@ def players_to_teams(players):
 
     experienced, not_experienced = group_by_experience(players)
 
-    # selection of experienced players
+    # select experienced players for the Dragons
     while True:
         pick = random.choice(experienced)
         if pick not in Dragons:
@@ -40,6 +40,7 @@ def players_to_teams(players):
             if len(Dragons) == 3:
                 break
 
+    # select experienced players for the Sharks
     while True:
         pick = random.choice(experienced)
         if (pick not in Dragons) and (pick not in Sharks):
@@ -47,6 +48,8 @@ def players_to_teams(players):
             if len(Sharks) == 3:
                 break
 
+
+    # select experienced players for the Raptors
     while True:
         pick = random.choice(experienced)
         if (pick not in Dragons) and (pick not in Sharks) and (pick not in Raptors):
@@ -55,7 +58,7 @@ def players_to_teams(players):
                 break
 
 
-    # select non experienced players for the Dragons
+    # select non-experienced players for the Dragons
     while True:
         # select player randomly
         pick = random.choice(not_experienced)
@@ -65,7 +68,7 @@ def players_to_teams(players):
                 break
 
 
-    # select non experienced players for the Sharks
+    # select non-experienced players for the Sharks
     while True:
         pick = random.choice(not_experienced)
         # check to see if the selected player isn't neither Dragons
@@ -76,7 +79,7 @@ def players_to_teams(players):
                 break
 
 
-    # select non experienced players for the Raptors
+    # select non-experienced players for the Raptors
     while True:
         # select player randomly
         pick = random.choice(not_experienced)
